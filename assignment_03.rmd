@@ -1,0 +1,33 @@
+---
+title: 'Assignment #3'
+author: "Saujanya Acharya and Rona Hu"
+date: "2023-10-04"
+output: pdf_document
+---
+
+# Assignment 03
+
+```{r}
+library(xml2)
+library(rvest)
+library(tidyverse)
+library(robotstxt)
+```
+
+```{r}
+is_allowed <- paths_allowed("https://en.wikipedia.org/wiki/Grand_Boulevard,_Chicago")
+
+url <- read_html("https://en.wikipedia.org/wiki/Grand_Boulevard,_Chicago")
+
+nds <- html_nodes(url, xpath = '//*[contains(concat( " ", @class, " " ), concat( " ", "us-census-pop-left", " " ))]')
+
+nds
+
+historical_population <- html_table(nds)
+
+hist_table <- as.data.frame(historical_population[1])
+
+final_table <- hist_table[-c(3)]
+
+final_table
+```

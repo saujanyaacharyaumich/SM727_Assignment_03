@@ -1,6 +1,7 @@
 .Rproj.user
 *.Rproj
 *.qmd
+.Rhistory
 
 
 
