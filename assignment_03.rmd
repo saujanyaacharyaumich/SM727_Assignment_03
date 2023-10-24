@@ -24,7 +24,7 @@ output:
 
 # Assignment 3
 
-### Github Link - 
+### Github Link - https://github.com/saujanyaacharyaumich/SM727_Assignment_03
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set( message=FALSE, warning = FALSE)
